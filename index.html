@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BellaCasa Móveis — Teresina e Timon</title>
+<meta name="description" content="Móveis de qualidade com entrega e montagem grátis em Teresina e Timon. Pague só na entrega. Compre pelo WhatsApp!">
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '912582321298283');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=912582321298283&ev=PageView&noscript=1"/></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --azul: #0D1B3E;
+  --azul2: #162447;
+  --dourado: #C9A84C;
+  --dourado-claro: #F5D080;
+  --verde-wa: #25D366;
+  --branco: #ffffff;
+  --cinza-claro: #f8f8f8;
+  --cinza-borda: #ede5d0;
+  --texto: #333333;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--texto);
+  background: #fff;
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; }
+
+/* ── HEADER ── */
+header {
+  background: var(--azul);
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 44px;
+  width: auto;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-name {
+  color: var(--dourado-claro);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.logo-sub {
+  color: #aab4cc;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+nav a {
+  color: #aab4cc;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+nav a:hover { color: var(--dourado-claro); }
+
+.btn-wa-header {
+  background: var(--verde-wa);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--dourado-claro);
+  border-radius: 2px;
+}
+
+/* ── MOBILE MENU ── */
+.mobile-menu {
+  display: none;
+  background: var(--azul2);
+  padding: 16px 20px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobile-menu a {
+  color: #aab4cc;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.mobile-menu.open { display: flex; }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('imagens/hero-fundo.jpg') center/cover no-repeat;
+  background-color: var(--azul2);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(10,22,50,0.92) 0%, rgba(10,22,50,0.75) 55%, rgba(10,22,50,0.4) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 58px);
+  color: var(--branco);
+  line-height: 1.1;
+  margin-bottom: 8px;
+  font-weight: 900;
+  max-width: 600px;
+}
+
+.hero h1 span { color: var(--dourado-claro); }
+
+.hero-sub {
+  color: rgba(255,255,255,0.72);
+  font-size: 16px;
+  margin-bottom: 28px;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+.hero-diferenciais {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.dif-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dif-ico {
+  width: 36px;
+  height: 36px;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.dif-txt { font-size: 12px; color: rgba(255,255,255,0.85); line-height: 1.4; }
+.dif-txt strong { color: var(--dourado-claro); display: block; font-size: 13px; }
+
+.hero-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-wa-hero {
+  background: var(--verde-wa);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 8px 24px rgba(37,211,102,0.35);
+}
+
+.btn-catalogo {
+  background: transparent;
+  color: var(--dourado-claro);
+  border: 2px solid var(--dourado-claro);
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+.hero-badge {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  background: rgba(13,27,62,0.9);
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: 12px;
+  padding: 12px 16px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.badge-num {
+  color: var(--dourado-claro);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.badge-txt { color: #aab4cc; font-size: 10px; line-height: 1.4; }
+.badge-stars { color: var(--dourado); font-size: 14px; margin-top: 4px; }
+
+/* ── CARROSSEL DIFERENCIAIS ── */
+.car-strip {
+  background: var(--dourado);
+  overflow: hidden;
+}
+
+.car-track-wrap { overflow: hidden; }
+
+.car-slides {
+  display: flex;
+  width: 400%;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+.car-slide {
+  width: 25%;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.car-slide-ico { font-size: 22px; }
+
+.car-slide-txt {
+  color: var(--azul);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.car-slide-txt small {
+  display: block;
+  font-weight: 500;
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+.car-dots {
+  background: var(--azul2);
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 7px 0;
+}
+
+.car-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(201,168,76,0.3);
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.car-dot.on {
+  background: var(--dourado-claro);
+  width: 18px;
+  border-radius: 3px;
+}
+
+/* ── SECTION BASE ── */
+.section {
+  padding: 56px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 32px;
+}
+
+.section-label {
+  color: var(--dourado);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.section-title {
+  font-size: clamp(22px, 3vw, 30px);
+  color: var(--azul);
+  font-weight: 800;
+}
+
+/* ── CAMPEÕES — CARROSSEL HORIZONTAL ── */
+.produtos-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.produtos-scroll::-webkit-scrollbar { display: none; }
+
+.prod-card {
+  min-width: 220px;
+  background: white;
+  border-radius: 14px;
+  border: 1px solid var(--cinza-borda);
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.prod-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.prod-img {
+  height: 180px;
+  background: var(--cinza-claro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.prod-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prod-img-placeholder {
+  font-size: 56px;
+  opacity: 0.3;
+}
+
+.prod-badge-top {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: var(--dourado);
+  color: var(--azul);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.prod-body { padding: 14px; }
+
+.prod-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--azul);
+  margin-bottom: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.prod-de {
+  font-size: 11px;
+  color: #bbb;
+  text-decoration: line-through;
+  margin-bottom: 2px;
+}
+
+.prod-por {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--dourado);
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2px;
+}
+
+.prod-avista {
+  font-size: 11px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.btn-ver-prod {
+  width: 100%;
+  background: var(--azul);
+  color: var(--dourado-claro);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.2s;
+}
+
+.btn-ver-prod:hover { background: var(--azul2); }
+
+/* ── CATEGORIAS ── */
+.categorias-bg { background: var(--cinza-claro); }
+
+.cats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.cat-card {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid var(--cinza-borda);
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.cat-card:hover {
+  border-color: var(--dourado);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.cat-ico {
+  width: 52px;
+  height: 52px;
+  background: var(--azul);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.cat-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--azul);
+  text-align: center;
+}
+
+.cat-qtd { font-size: 10px; color: #aaa; }
+
+/* ── TRUST ── */
+.trust-bg { background: var(--azul); }
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.trust-item {
+  padding: 36px 20px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.trust-item:last-child { border-right: none; }
+
+.trust-num {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--dourado-claro);
+  margin-bottom: 6px;
+}
+
+.trust-txt { color: #aab4cc; font-size: 12px; line-height: 1.5; }
+
+/* ── CARTÕES ── */
+.cartoes-section {
+  background: white;
+  padding: 28px 20px;
+  text-align: center;
+  border-top: 1px solid var(--cinza-borda);
+  border-bottom: 1px solid var(--cinza-borda);
+}
+
+.cartoes-label {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.cartoes-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.band {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1.5px solid;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cartoes-note {
+  font-size: 11px;
+  color: #aaa;
+  margin-top: 8px;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #08111F;
+  padding: 32px 20px 20px;
+  border-top: 3px solid var(--dourado);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.footer-col-title {
+  color: var(--dourado-claro);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.footer-col p, .footer-col a {
+  color: #aab4cc;
+  font-size: 12px;
+  line-height: 1.8;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-col a:hover { color: var(--dourado-claro); }
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-copy { color: #444; font-size: 11px; }
+
+.footer-bands { display: flex; gap: 8px; }
+
+/* ── WHATSAPP FLUTUANTE ── */
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: var(--verde-wa);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(37,211,102,0.45);
+  z-index: 99;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.wa-float:hover { transform: scale(1.1); }
+
+/* ── MODAL PRODUTO ── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 200;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.modal-overlay.open { display: flex; align-items: flex-start; justify-content: center; }
+
+.modal {
+  background: white;
+  border-radius: 16px;
+  max-width: 480px;
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.modal-header {
+  background: var(--azul);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-title { color: var(--dourado-claro); font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; }
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #aab4cc;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-img {
+  height: 220px;
+  background: var(--cinza-claro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.modal-img img { width: 100%; height: 100%; object-fit: cover; }
+.modal-img-placeholder { font-size: 72px; opacity: 0.2; }
+
+.modal-body { padding: 20px; }
+
+.modal-prod-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--azul);
+  margin-bottom: 16px;
+}
+
+.preco-box {
+  background: var(--cinza-claro);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+  border: 1px solid var(--cinza-borda);
+}
+
+.preco-de { font-size: 12px; color: #bbb; text-decoration: line-through; margin-bottom: 4px; }
+
+.preco-por {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  color: var(--dourado);
+  margin-bottom: 2px;
+}
+
+.preco-avista { font-size: 12px; color: #555; font-weight: 600; margin-bottom: 14px; }
+
+.preco-divider { height: 1px; background: var(--cinza-borda); margin: 12px 0; }
+
+.pix-box {
+  background: #e8f5e9;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border: 1px solid #c8e6c9;
+}
+
+.pix-title { font-size: 12px; color: #1b5e20; font-weight: 700; margin-bottom: 4px; }
+.pix-valor { font-size: 18px; font-weight: 800; color: #2e7d32; font-family: 'Montserrat', sans-serif; }
+.pix-eco { font-size: 11px; color: #388e3c; margin-top: 2px; }
+
+.parcela-box {
+  background: #e3f2fd;
+  border-radius: 8px;
+  padding: 10px 14px;
+  border: 1px solid #bbdefb;
+}
+
+.parcela-title { font-size: 11px; color: #0D47A1; font-weight: 700; margin-bottom: 4px; }
+.parcela-valor { font-size: 16px; font-weight: 800; color: #1565C0; font-family: 'Montserrat', sans-serif; }
+.parcela-sub { font-size: 10px; color: #1976d2; margin-top: 3px; }
+
+.btn-wa-modal {
+  width: 100%;
+  background: var(--verde-wa);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+.entrega-modal {
+  background: var(--cinza-claro);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 10px;
+  border: 1px solid var(--cinza-borda);
+  font-size: 12px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.modal-desc { margin-top: 16px; border-top: 1px solid var(--cinza-borda); padding-top: 14px; }
+.modal-desc-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; color: var(--azul); margin-bottom: 10px; }
+.modal-desc ul { list-style: none; }
+.modal-desc ul li { font-size: 13px; color: #555; padding: 6px 0; border-bottom: 1px solid #f5f5f5; display: flex; gap: 8px; }
+.modal-desc ul li::before { content: "•"; color: var(--dourado); font-weight: 700; flex-shrink: 0; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .cats-grid { grid-template-columns: repeat(2, 1fr); }
+  .trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .trust-item:nth-child(2) { border-right: none; }
+  .footer-inner { grid-template-columns: 1fr; gap: 20px; }
+  nav { display: none; }
+  .hamburger { display: flex; }
+  .hero-badge { display: none; }
+}
+
+@media (max-width: 600px) {
+  .hero { min-height: 400px; }
+  .hero-diferenciais { gap: 14px; }
+  .trust-grid { grid-template-columns: 1fr 1fr; }
+  .cats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div style="width:40px;height:40px;background:var(--dourado);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;">🏠</div>
+      <div class="logo-text">
+        <span class="logo-name">BellaCasa</span>
+        <span class="logo-sub">Móveis</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#campeoes">Mais Vendidos</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#localizacao">Onde Entregamos</a>
+      <a href="https://wa.me/5586999834720" class="btn-wa-header" target="_blank">💬 WhatsApp</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#campeoes" onclick="toggleMenu()">Mais Vendidos</a>
+    <a href="#categorias" onclick="toggleMenu()">Categorias</a>
+    <a href="#localizacao" onclick="toggleMenu()">Onde Entregamos</a>
+    <a href="https://wa.me/5586999834720" target="_blank">💬 Falar no WhatsApp</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Sua casa<br><span>merece o melhor.</span></h1>
+    <p class="hero-sub">Móveis de qualidade, conforto que você sente e preços que cabem no seu bolso.</p>
+    <div class="hero-diferenciais">
+      <div class="dif-item">
+        <div class="dif-ico">🚚</div>
+        <div class="dif-txt"><strong>Frete Grátis</strong>Teresina e Timon</div>
+      </div>
+      <div class="dif-item">
+        <div class="dif-ico">🔧</div>
+        <div class="dif-txt"><strong>Montagem Grátis</strong>com nossos montadores</div>
+      </div>
+      <div class="dif-item">
+        <div class="dif-ico">💰</div>
+        <div class="dif-txt"><strong>Pague só na entrega</strong>sem risco nenhum</div>
+      </div>
+    </div>
+    <div class="hero-btns">
+      <a href="https://wa.me/5586999834720" class="btn-wa-hero" target="_blank">
+        <span style="font-size:18px;">💬</span> Compre pelo WhatsApp
+      </a>
+      <a href="#categorias" class="btn-catalogo">Ver produtos</a>
+    </div>
+  </div>
+  <div class="hero-badge">
+    <div class="badge-num">+4.800</div>
+    <div class="badge-txt">famílias<br>satisfeitas</div>
+    <div class="badge-stars">★★★★★</div>
+  </div>
+</section>
+
+<!-- CARROSSEL DIFERENCIAIS -->
+<div class="car-strip">
+  <div class="car-track-wrap">
+    <div class="car-slides" id="carSlides">
+      <div class="car-slide"><span class="car-slide-ico">🚚</span><div class="car-slide-txt">Entrega grátis<small>Teresina e Timon</small></div></div>
+      <div class="car-slide"><span class="car-slide-ico">🔧</span><div class="car-slide-txt">Montagem grátis<small>Incluída sem custo</small></div></div>
+      <div class="car-slide"><span class="car-slide-ico">💰</span><div class="car-slide-txt">Pague ao receber<small>No ato da entrega</small></div></div>
+      <div class="car-slide"><span class="car-slide-ico">💳</span><div class="car-slide-txt">Facilitamos no cartão<small>Visa e Mastercard</small></div></div>
+    </div>
+  </div>
+  <div class="car-dots">
+    <button class="car-dot on" id="cd0" onclick="goSlide(0)"></button>
+    <button class="car-dot" id="cd1" onclick="goSlide(1)"></button>
+    <button class="car-dot" id="cd2" onclick="goSlide(2)"></button>
+    <button class="car-dot" id="cd3" onclick="goSlide(3)"></button>
+  </div>
+</div>
+
+<!-- CAMPEÕES DE VENDA -->
+<div id="campeoes">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">Mais vendidos</div>
+      <h2 class="section-title">Campeões de venda</h2>
+    </div>
+    <div class="produtos-scroll" id="produtosScroll">
+      <!-- Produtos carregados via JS -->
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORIAS -->
+<div class="categorias-bg" id="categorias">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">Catálogo</div>
+      <h2 class="section-title">Explore nossos produtos</h2>
+    </div>
+    <div class="cats-grid">
+      <a href="#" class="cat-card" onclick="filtrarCategoria('camas-casal')">
+        <div class="cat-ico">🛏️</div>
+        <div class="cat-name">Camas Box Casal</div>
+        <div class="cat-qtd">Vários modelos</div>
+      </a>
+      <a href="#" class="cat-card" onclick="filtrarCategoria('camas-solteiro')">
+        <div class="cat-ico">🛏️</div>
+        <div class="cat-name">Camas Box Solteiro</div>
+        <div class="cat-qtd">Vários modelos</div>
+      </a>
+      <a href="#" class="cat-card" onclick="filtrarCategoria('roupeiros')">
+        <div class="cat-ico">🚪</div>
+        <div class="cat-name">Roupeiros</div>
+        <div class="cat-qtd">20+ modelos</div>
+      </a>
+      <a href="#" class="cat-card" onclick="filtrarCategoria('comodas')">
+        <div class="cat-ico">🗄️</div>
+        <div class="cat-name">Cômodas</div>
+        <div class="cat-qtd">6 modelos</div>
+      </a>
+      <a href="#" class="cat-card" onclick="filtrarCategoria('mesas')">
+        <div class="cat-ico">🍽️</div>
+        <div class="cat-name">Mesas de Jantar</div>
+        <div class="cat-qtd">10 modelos</div>
+      </a>
+      <a href="#" class="cat-card" onclick="filtrarCategoria('paineis')">
+        <div class="cat-ico">📺</div>
+        <div class="cat-name">Painéis e Racks</div>
+        <div class="cat-qtd">12 modelos</div>
+      </a>
+      <a href="#" class="cat-card" onclick="filtrarCategoria('cozinhas')">
+        <div class="cat-ico">🍳</div>
+        <div class="cat-name">Cozinhas</div>
+        <div class="cat-qtd">12 modelos</div>
+      </a>
+      <a href="#" class="cat-card" onclick="filtrarCategoria('eletros')">
+        <div class="cat-ico">⚡</div>
+        <div class="cat-name">Eletros</div>
+        <div class="cat-qtd">Em breve</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST / NÚMEROS -->
+<div class="trust-bg">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <div class="trust-num">+4.800</div>
+      <div class="trust-txt">famílias atendidas em Teresina e Timon</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num">24h</div>
+      <div class="trust-txt">prazo de entrega após o pedido</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num">100%</div>
+      <div class="trust-txt">pague só quando o produto chegar</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num">★ 5.0</div>
+      <div class="trust-txt">avaliação dos nossos clientes</div>
+    </div>
+  </div>
+</div>
+
+<!-- LOCALIZAÇÃO -->
+<div id="localizacao">
+  <div class="section" style="text-align:center;">
+    <div class="section-label" style="text-align:center;">Onde atuamos</div>
+    <h2 class="section-title" style="text-align:center;margin-bottom:16px;">Somos 100% online</h2>
+    <p style="color:#666;font-size:14px;max-width:520px;margin:0 auto 28px;line-height:1.7;">
+      Sem loja física, sem filas. Você compra pelo WhatsApp, entregamos na sua casa e montamos tudo gratuitamente. Você só paga quando o produto chegar.
+    </p>
+    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+      <div style="background:var(--cinza-claro);border:1px solid var(--cinza-borda);border-radius:10px;padding:14px 24px;text-align:center;">
+        <div style="font-size:22px;margin-bottom:4px;">📍</div>
+        <div style="font-family:'Montserrat',sans-serif;font-weight:700;color:var(--azul);font-size:14px;">Teresina — PI</div>
+      </div>
+      <div style="background:var(--cinza-claro);border:1px solid var(--cinza-borda);border-radius:10px;padding:14px 24px;text-align:center;">
+        <div style="font-size:22px;margin-bottom:4px;">📍</div>
+        <div style="font-family:'Montserrat',sans-serif;font-weight:700;color:var(--azul);font-size:14px;">Timon — MA</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARTÕES -->
+<div class="cartoes-section">
+  <div class="cartoes-label">💳 Facilitamos em todos os cartões</div>
+  <div class="cartoes-row">
+    <div class="band" style="color:#1A1F71;border-color:#1A1F71;">VISA</div>
+    <div class="band" style="color:#EB001B;border-color:#EB001B;">MASTERCARD</div>
+  </div>
+  <div class="cartoes-note">Parcelamento e condições negociados via WhatsApp</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-col-title">BellaCasa Móveis</div>
+      <p>Móveis de qualidade com entrega e montagem grátis em Teresina e Timon.</p>
+      <p style="margin-top:8px;">Pague só quando o produto chegar.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Categorias</div>
+      <a href="#">Camas Box</a>
+      <a href="#">Roupeiros</a>
+      <a href="#">Sofás</a>
+      <a href="#">Mesas de Jantar</a>
+      <a href="#">Painéis e Racks</a>
+      <a href="#">Cozinhas</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Atendimento</div>
+      <a href="https://wa.me/5586999834720" target="_blank">💬 (86) 99983-4720</a>
+      <p>Teresina-PI e Timon-MA</p>
+      <p style="margin-top:8px;">Seg a Sáb — 8h às 20h</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 BellaCasa Móveis — Todos os direitos reservados</span>
+    <div class="footer-bands">
+      <div class="band" style="color:#1A1F71;border-color:rgba(255,255,255,0.15);font-size:10px;">VISA</div>
+      <div class="band" style="color:#EB001B;border-color:rgba(255,255,255,0.15);font-size:10px;">MASTERCARD</div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5586999834720" class="wa-float" target="_blank">💬</a>
+
+<!-- MODAL PRODUTO -->
+<div class="modal-overlay" id="modalOverlay" onclick="fecharModal(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <span class="modal-title" id="modalTitle">Produto</span>
+      <button class="modal-close" onclick="fecharModalBtn()">✕</button>
+    </div>
+    <div class="modal-img" id="modalImg">
+      <div class="modal-img-placeholder" id="modalIco">🚪</div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-prod-name" id="modalNome">Roupeiro Vitória</div>
+      <div class="preco-box">
+        <div class="preco-de">Valor do produto: <span id="modalDe">R$ 999,90</span></div>
+        <div class="preco-por" id="modalPor">R$ 799,90</div>
+        <div class="preco-avista">à vista</div>
+        <div class="preco-divider"></div>
+        <div class="pix-box">
+          <div class="pix-title">💰 Você economiza:</div>
+          <div class="pix-valor" id="modalEco">R$ 200,00</div>
+          <div class="pix-eco" id="modalEcoTxt">em relação ao valor do produto</div>
+        </div>
+        <div style="height:8px;"></div>
+        <div class="parcela-box">
+          <div class="parcela-title">💳 Ou parcelamos em:</div>
+          <div class="parcela-valor" id="modalParcela">12x de R$ 78,42</div>
+          <div class="parcela-sub">Visa e Mastercard — condições via WhatsApp</div>
+        </div>
+      </div>
+      <a href="https://wa.me/5586999834720" class="btn-wa-modal" target="_blank" id="modalWaBtn">
+        <span style="font-size:18px;">💬</span> Comprar no WhatsApp
+      </a>
+      <div class="entrega-modal">
+        <span style="font-size:18px;">🚚</span>
+        <span><strong>Entrega grátis</strong> em Teresina e Timon · Montagem incluída · Pague só na entrega</span>
+      </div>
+      <div class="modal-desc">
+        <div class="modal-desc-title">Descrição do Produto</div>
+        <ul id="modalDesc"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── DADOS DOS PRODUTOS ───────────────────────────────────────────────────
+const WHATSAPP = '5586999834720';
+
+const produtos = [
+  {
+    id: 1,
+    nome: 'Roupeiro Vitória',
+    categoria: 'roupeiros',
+    ico: '🚪',
+    img: 'imagens/roupeiros/vitoria-1.jpg',
+    valorReal: 999.90,
+    valorVista: 799.90,
+    ativo: true,
+    badge: 'TOP 1',
+    descricao: [
+      'Altura: 1,80m | Largura: 1,48m | Prof: 0,40m',
+      '4 portas com espelho central',
+      '4 gavetas na base',
+      'Estrutura em MDP de alta resistência',
+      'Cores disponíveis — consulte via WhatsApp'
+    ]
+  },
+  {
+    id: 2,
+    nome: 'Roupeiro Clara',
+    categoria: 'roupeiros',
+    ico: '🚪',
+    img: 'imagens/roupeiros/clara-1.jpg',
+    valorReal: 1530.00,
+    valorVista: 1299.00,
+    ativo: true,
+    badge: 'TOP 2',
+    descricao: [
+      'Altura: 2,15m | Largura: 1,86m | Prof: 0,47m',
+      '2 portas deslizantes com espelho grande',
+      'Possui pés — mais elegante',
+      'Estrutura em MDP',
+      'Cores disponíveis — consulte via WhatsApp'
+    ]
+  },
+  {
+    id: 3,
+    nome: 'Cama Prime Casal',
+    categoria: 'camas-casal',
+    ico: '🛏️',
+    img: 'imagens/camas/prime-casal-1.jpg',
+    valorReal: 1094.00,
+    valorVista: 899.90,
+    ativo: true,
+    badge: 'TOP 3',
+    descricao: [
+      'Dimensões: 1,88m x 1,38m',
+      'Base + colchão incluso',
+      'Molas ensacadas individuais',
+      'Anti ácaros e antifungos',
+      'Tecido malha fria'
+    ]
+  },
+  {
+    id: 4,
+    nome: 'Unibox Casal',
+    categoria: 'camas-casal',
+    ico: '🛏️',
+    img: 'imagens/camas/unibox-casal-1.jpg',
+    valorReal: 999.90,
+    valorVista: 799.90,
+    ativo: true,
+    badge: 'TOP 4',
+    descricao: [
+      'Dimensões: 1,88m x 1,38m',
+      'Base + colchão incluso',
+      'Molas ensacadas individuais',
+      'Malha fria — mais conforto',
+      'Antiácaros e antifungos'
+    ]
+  }
+];
+
+// ─── FUNÇÕES DE CÁLCULO ───────────────────────────────────────────────────
+function fmt(v) {
+  return v.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+function calcParcela(valorReal) {
+  return Math.ceil((valorReal / 0.85 / 12) * 100) / 100;
+}
+
+// ─── RENDERIZAR CAMPEÕES ──────────────────────────────────────────────────
+function renderCampeoes() {
+  const container = document.getElementById('produtosScroll');
+  const ativos = produtos.filter(p => p.ativo);
+  container.innerHTML = ativos.map(p => `
+    <div class="prod-card" onclick="abrirModal(${p.id})">
+      <div class="prod-img">
+        <img src="${p.img}" alt="${p.nome}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">${p.ico}</div>
+        ${p.badge ? `<div class="prod-badge-top">${p.badge}</div>` : ''}
+      </div>
+      <div class="prod-body">
+        <div class="prod-name">${p.nome}</div>
+        <div class="prod-de">De R$ ${fmt(p.valorReal)}</div>
+        <div class="prod-por">R$ ${fmt(p.valorVista)}</div>
+        <div class="prod-avista">à vista</div>
+        <button class="btn-ver-prod">Ver produto</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ─── MODAL PRODUTO ────────────────────────────────────────────────────────
+function abrirModal(id) {
+  const p = produtos.find(x => x.id === id);
+  if (!p) return;
+
+  const eco = p.valorReal - p.valorVista;
+  const parcela = calcParcela(p.valorReal);
+  const msg = encodeURIComponent(`Olá! Tenho interesse no ${p.nome} por R$ ${fmt(p.valorVista)} à vista.`);
+
+  document.getElementById('modalTitle').textContent = p.nome;
+  document.getElementById('modalNome').textContent = p.nome;
+  document.getElementById('modalIco').textContent = p.ico;
+  document.getElementById('modalDe').textContent = `R$ ${fmt(p.valorReal)}`;
+  document.getElementById('modalPor').textContent = `R$ ${fmt(p.valorVista)}`;
+  document.getElementById('modalEco').textContent = `R$ ${fmt(eco)}`;
+  document.getElementById('modalEcoTxt').textContent = `em relação ao valor do produto`;
+  document.getElementById('modalParcela').textContent = `12x de R$ ${fmt(parcela)}`;
+  document.getElementById('modalWaBtn').href = `https://wa.me/${WHATSAPP}?text=${msg}`;
+  document.getElementById('modalDesc').innerHTML = p.descricao.map(d => `<li>${d}</li>`).join('');
+
+  const imgEl = document.getElementById('modalImg');
+  imgEl.innerHTML = `
+    <img src="${p.img}" alt="${p.nome}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <div class="modal-img-placeholder" style="display:none">${p.ico}</div>
+  `;
+
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  // Pixel — ViewContent
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'ViewContent', {
+      content_name: p.nome,
+      content_category: p.categoria,
+      value: p.valorVista,
+      currency: 'BRL'
+    });
+  }
+}
+
+function fecharModal(e) {
+  if (e.target === document.getElementById('modalOverlay')) fecharModalBtn();
+}
+
+function fecharModalBtn() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ─── FILTRAR CATEGORIA ────────────────────────────────────────────────────
+function filtrarCategoria(cat) {
+  event.preventDefault();
+  const filtrados = produtos.filter(p => p.ativo && p.categoria === cat);
+  if (filtrados.length === 0) {
+    alert('Em breve mais produtos nessa categoria! Fale conosco pelo WhatsApp.');
+    return;
+  }
+  const container = document.getElementById('produtosScroll');
+  container.innerHTML = filtrados.map(p => `
+    <div class="prod-card" onclick="abrirModal(${p.id})">
+      <div class="prod-img">
+        <img src="${p.img}" alt="${p.nome}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="prod-img-placeholder" style="display:none">${p.ico}</div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-name">${p.nome}</div>
+        <div class="prod-de">De R$ ${fmt(p.valorReal)}</div>
+        <div class="prod-por">R$ ${fmt(p.valorVista)}</div>
+        <div class="prod-avista">à vista</div>
+        <button class="btn-ver-prod">Ver produto</button>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('campeoes').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ─── CARROSSEL DIFERENCIAIS ───────────────────────────────────────────────
+let carAtual = 0;
+const carSlides = document.getElementById('carSlides');
+const carDots = [
+  document.getElementById('cd0'),
+  document.getElementById('cd1'),
+  document.getElementById('cd2'),
+  document.getElementById('cd3')
+];
+
+function goSlide(n) {
+  carAtual = n;
+  carSlides.style.transform = `translateX(-${n * 25}%)`;
+  carDots.forEach((d, i) => d.classList.toggle('on', i === n));
+}
+
+setInterval(() => goSlide((carAtual + 1) % 4), 2000);
+
+// ─── MENU MOBILE ──────────────────────────────────────────────────────────
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ─── INIT ─────────────────────────────────────────────────────────────────
+renderCampeoes();
+</script>
+</body>
+</html>
